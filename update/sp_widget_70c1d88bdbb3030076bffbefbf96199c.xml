@@ -23,11 +23,12 @@
 			noteBody: c.data.note,
 			noteTitle: c.data.title			
 		}).then(function(r) {
+			$rootScope.$emit('noteUpdated', r.data);
 		});
-		var id = c.data.id
+		/*var id = c.data.id
 		$rootScope.updatedTitle = c.data.title;
-		$rootScope.updatedNote = c.data.note
-		$rootScope.$emit('noteUpdated', id);
+		$rootScope.updatedNote = c.data.note*/
+		
 	}
 	}]]></client_script>
         <controller_as>c</controller_as>
@@ -68,14 +69,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-25 21:08:40</sys_created_on>
         <sys_id>70c1d88bdbb3030076bffbefbf96199c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Notes Body</sys_name>
         <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
         <sys_update_name>sp_widget_70c1d88bdbb3030076bffbefbf96199c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-26 21:36:29</sys_updated_on>
+        <sys_updated_on>2018-01-29 21:50:14</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default" ng-show="c.data.noteID">
   <div class="panel-heading clearfix">
     <div class="row">
